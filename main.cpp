@@ -46,15 +46,6 @@ int main(int argc, char *argv[])
     table.setItem(5, 0, row6_item1);
     table.setItem(5, 1, row6_item2);
 
-    // QSize defaultSize(300, 50);
-
-    // for (int row = 0; row < table.rowCount(); ++row) {
-    //     for (int column = 0; column < table.columnCount(); ++column) {
-    //         QTableWidgetItem *item = table.item(row, column);
-    //         if (item) item->setSizeHint(defaultSize);
-    //     }
-    // }
-
     QPushButton *addBtn = new QPushButton("Add");
     QPushButton *updateBtn = new QPushButton("Update");
     QPushButton *deleteBtn = new QPushButton("Delete");
@@ -65,6 +56,7 @@ int main(int argc, char *argv[])
 
     layout->addWidget(&table);
     layout->addLayout(btnLayout);
+    layout->addStretch();
     w.setLayout(layout);
     w.show();
     return a.exec();
